@@ -1,7 +1,12 @@
 {
   "name": "@app/root-config",
   "scripts": {
-    "start": "webpack serve --port 9000 --env isLocal",
+    "start": "npm run start:host",
+    "start-all": "concurrently npm:start:*",
+    "start:host": "webpack serve --port 9000 --env isLocal",
+    "start:app-about": "cd ./app-about && npm start",
+    "start:app-home": "cd ./app-home && npm start",
+    "start:app-nav": "cd ./app-nav && npm start",
     "lint": "eslint src",
     "test": "concurrently npm:test:*",
     "test:app-about": "cd ./app-about && npm run test -- --no-progress --watch=false",

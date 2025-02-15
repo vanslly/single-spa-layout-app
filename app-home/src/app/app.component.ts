@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { singleSpaPropsSubject } from '../single-spa/single-spa-props';
 import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-home-root',
-    imports: [RouterOutlet, CommonModule],
+    imports: [CommonModule],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
