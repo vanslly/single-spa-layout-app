@@ -3,7 +3,10 @@
   "scripts": {
     "start": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src",
-    "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
+    "test": "concurrently npm:test:*",
+    "test:app-about": "cd ./app-about && npm run test -- --no-progress --watch=false",
+    "test:app-home": "cd ./app-home && npm run test -- --no-progress --watch=false",
+    "test:app-nav": "cd ./app-nav && npm run test -- --no-progress --watch=false",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "prepare": "husky install",

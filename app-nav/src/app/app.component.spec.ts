@@ -20,10 +20,12 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('app-nav');
   });
 
-  it('should render title', () => {
+  it('should render menu items', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, app-nav');
+    const allMenuItems = compiled.querySelectorAll('a');
+    expect(allMenuItems[0]?.textContent).toBe('Home');
+    expect(allMenuItems[1]?.textContent).toBe('About');
   });
 });
