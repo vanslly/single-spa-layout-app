@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-import { singleSpaPropsSubject } from 'src/single-spa/single-spa-props';
+import { RouterOutlet } from '@angular/router';
+import { singleSpaPropsSubject } from '../single-spa/single-spa-props';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-home-root',
+  standalone: true,
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'app-home';

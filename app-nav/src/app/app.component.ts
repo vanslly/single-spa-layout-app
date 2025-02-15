@@ -2,15 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-about-root',
+  selector: 'app-nav-root',
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'app-about';
-  constructor() {
-    // throw new Error('This is an error');
-  }
+  title = 'app-nav';
 }
